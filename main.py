@@ -106,6 +106,7 @@ async def all_posts_verify(
         db: Session = Depends(get_db),
         get_current_user: int = Depends(oauth2.get_current_user)):
 
+
     posts = db.query(models.Post).all()
 
     return {"data": posts}
