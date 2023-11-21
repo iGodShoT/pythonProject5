@@ -13,6 +13,12 @@ class Post(Base):
     published = Column(Boolean, nullable=True, server_default='TRUE')
     rating = Column(Integer, nullable=True)
 
+class Comment(Base):
+    __tablename__ = "comments"
+
+    id = Column(Integer, primary_key=True, nullable=False)
+    text = Column(String, nullable=False)
+
 
 class User(Base):
     __tablename__ = "users"
