@@ -15,6 +15,9 @@ from fastapi.security.oauth2 import OAuth2PasswordRequestForm
 router = APIRouter(tags=['Authentication'])
 
 
+
+
+
 # Можно авторизоваться с помощью своей формы
 # В этом случае в postman следует передавать данные в Body->raw->JSON
 @router.post('/login')
